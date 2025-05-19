@@ -5,12 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="style.css">
 <title>Ejercicios Básicos de Funciones en JavaScript</title>
+
 </head>
 <body>
   <div class="container">
     <h1>Ejercicios Básicos de Funciones en JavaScript</h1>
 
-    <!-- 1. Sumar dos números -->
+    <!-- 1. Saludar con un nombre -->
+    <section>
+        <label>3. Saludar con un nombre</label>
+        <input id="saludo-nombre" type="text" placeholder="Tu nombre" />
+        <button onclick="saludar()">Saludar</button>
+        <div id="resultado-saludo" class="resultado"></div>
+      </section>
+  
+      <!-- 2. Mostrar mensaje en consola -->
+      <section>
+        <label>4. Mostrar mensaje en consola</label>
+        <button onclick="mostrarMensaje()">Mostrar mensaje</button>
+        <div class="resultado">Abre la consola del navegador para ver el mensaje.</div>
+      </section>
+
+    <!-- 3. Sumar dos números -->
     <section>
       <label>1. Sumar dos números</label>
       <input id="sumar-num1" type="number" placeholder="Número 1" />
@@ -19,7 +35,7 @@
       <div id="resultado-suma" class="resultado"></div>
     </section>
 
-    <!-- 2. Decir si un número es par -->
+    <!-- 4. Decir si un número es par -->
     <section>
       <label>2. Decir si un número es par</label>
       <input id="par-num" type="number" placeholder="Número" />
@@ -27,20 +43,7 @@
       <div id="resultado-par" class="resultado"></div>
     </section>
 
-    <!-- 3. Saludar con un nombre -->
-    <section>
-      <label>3. Saludar con un nombre</label>
-      <input id="saludo-nombre" type="text" placeholder="Tu nombre" />
-      <button onclick="saludar()">Saludar</button>
-      <div id="resultado-saludo" class="resultado"></div>
-    </section>
-
-    <!-- 4. Mostrar mensaje en consola -->
-    <section>
-      <label>4. Mostrar mensaje en consola</label>
-      <button onclick="mostrarMensaje()">Mostrar mensaje</button>
-      <div class="resultado">Abre la consola del navegador para ver el mensaje.</div>
-    </section>
+    
 
     <!-- 5. Multiplicar dos números -->
     <section>
@@ -93,7 +96,93 @@
       <button onclick="mayorDeEdad()">Verificar edad</button>
       <div id="resultado-edad" class="resultado"></div>
     </section>
+
+    <!-- 11. Convertir metros a centímetros -->
+    <section>
+      <label>11. Convertir metros a centímetros</label>
+      <input id="metros" type="number" placeholder="Metros" />
+      <button onclick="metrosACentimetros()">Convertir</button>
+      <div id="resultado-metros" class="resultado"></div>
+    </section>
+
+    <!-- 12. Saludo según la hora -->
+    <section>
+      <label>12. Saludo según la hora (antes o después de las 12)</label>
+      <input id="hora" type="number" min="0" max="23" placeholder="Hora (0-23)" />
+      <button onclick="saludoHora()">Mostrar saludo</button>
+      <div id="resultado-hora" class="resultado"></div>
+    </section>
+
+    <!-- 13. Primera letra mayúscula -->
+    <section>
+      <label>13. Primera letra de un nombre en mayúscula</label>
+      <input id="nombre-mayuscula" type="text" placeholder="Nombre" />
+      <button onclick="primeraMayuscula()">Convertir</button>
+      <div id="resultado-mayuscula" class="resultado"></div>
+    </section>
+
+    <!-- 14. Encontrar mayor de dos números -->
+    <section>
+      <label>14. Encontrar mayor de dos números</label>
+      <input id="mayor-num1" type="number" placeholder="Número 1" />
+      <input id="mayor-num2" type="number" placeholder="Número 2" />
+      <button onclick="mayorDeDos()">Mostrar mayor</button>
+      <div id="resultado-mayor" class="resultado"></div>
+    </section>
+
+    <!-- 15. Perímetro de rectángulo -->
+    <section>
+      <label>15. Perímetro de un rectángulo</label>
+      <input id="base" type="number" placeholder="Base" />
+      <input id="altura" type="number" placeholder="Altura" />
+      <button onclick="perimetroRectangulo()">Calcular perímetro</button>
+      <div id="resultado-perimetro" class="resultado"></div>
+    </section>
+
+    <!-- 16. Decir si número es positivo, negativo o cero -->
+    <section>
+      <label>16. Número positivo, negativo o cero</label>
+      <input id="pos-neg-cero" type="number" placeholder="Número" />
+      <button onclick="posNegCero()">Verificar</button>
+      <div id="resultado-posnegcero" class="resultado"></div>
+    </section>
+
+    <!-- 17. Repetir palabra n veces -->
+    <section>
+      <label>17. Repetir una palabra un número determinado de veces</label>
+      <input id="palabra-repetir" type="text" placeholder="Palabra" />
+      <input id="veces" type="number" placeholder="Veces" />
+      <button onclick="repetirPalabra()">Repetir</button>
+      <div id="resultado-repetir" class="resultado" style="white-space: pre-wrap;"></div>
+    </section>
+
+    <!-- 18. Convertir texto a minúsculas -->
+    <section>
+      <label>18. Convertir cadena de texto a minúsculas</label>
+      <input id="texto-minusculas" type="text" placeholder="Texto" />
+      <button onclick="aMinusculas()">Convertir</button>
+      <div id="resultado-minusculas" class="resultado"></div>
+    </section>
+
+    <!-- 19. Suma de números en array (separados por comas) -->
+    <section>
+      <label>19. Sumar números en una lista separada por comas</label>
+      <input id="lista-numeros" type="text" placeholder="Ej: 2,3,4" />
+      <button onclick="sumarArray()">Sumar</button>
+      <div id="resultado-suma-array" class="resultado"></div>
+    </section>
+
+    <!-- 20. Concatenar dos cadenas con espacio -->
+    <section>
+      <label>20. Concatenar dos cadenas con un espacio</label>
+      <input id="cadena1" type="text" placeholder="Cadena 1" />
+      <input id="cadena2" type="text" placeholder="Cadena 2" />
+      <button onclick="concatenarCadenas()">Concatenar</button>
+      <div id="resultado-concatenar" class="resultado"></div>
+    </section>
   </div>
+
+
 </body>
 </html>
 
